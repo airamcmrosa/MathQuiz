@@ -6,7 +6,7 @@
 ---
 
 ## Task Atual
-task-000 (aguardando primeiro prompt do usuário)
+task-002 (próxima: configurar agentes Kiro)
 
 ## Stage
 IDLE
@@ -15,13 +15,13 @@ IDLE
 nenhum
 
 ## Última Atualização
-2026-08-31T18:00:00
+2026-09-01T10:46:00
 
 ## Backlog de Tasks
 
 | Task | Descrição | Status |
 |------|-----------|--------|
-| task-001 | Provisionar repositório GitHub e subir governança | PENDING |
+| task-001 | Provisionar repositório GitHub e subir governança | DONE ✓ |
 | task-002 | Configurar agentes Kiro (JSONs) | PENDING |
 | task-003 | PM — User Stories do Quiz | PENDING |
 | task-004 | Frontend — Quiz React + Vite | PENDING |
@@ -31,11 +31,26 @@ nenhum
 | task-008 | QA — Suite de Testes | PENDING |
 | task-009 | Wiring — Integração end-to-end | PENDING |
 
+## Gate 0 — Verificado em 2026-09-01T10:46:00
+
+| Condição | Status |
+|----------|--------|
+| gh repo view retorna sucesso | ✓ https://github.com/airamcmrosa/MathQuiz |
+| branch protection em main ativa | ✓ 1 review obrigatório, dismiss stale, no force push |
+| .kiro/steering/*.md no remoto | ✓ commitado em chore: initial governance |
+| .kiro/agents/*.json no remoto | ✓ commitado em chore: initial governance |
+
 ## Decisões HIL Registradas
-(nenhuma ainda)
+
+| Timestamp | Gate | Pergunta | Resposta |
+|-----------|------|----------|----------|
+| 2026-09-01T10:46:00 | Gate 0 | Repo privado ou público? | Público (limitação plano free para branch protection) |
+| 2026-09-01T10:46:00 | Gate 0 | PRs abertos por bot ou conta própria? | Agentes abrem PR como airamcmrosa; usuário aprova e faz merge (HIL Gate 3) |
 
 ## Artefatos Gerados
-(nenhum ainda)
+
+- Repositório: https://github.com/airamcmrosa/MathQuiz
+- Commit inicial: chore: initial governance and project structure (57 arquivos)
 
 ## Status dos Agentes
 
