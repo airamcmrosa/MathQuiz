@@ -84,15 +84,27 @@ Exemplos:
 
 ## 9. Artefatos de Aprendizado
 
-**Toda explicação técnica relevante DEVE gerar um documento de estudo em `.docs/learnings/`.**
+**Toda explicação técnica — incluindo respostas a perguntas do usuário — DEVE gerar um documento de estudo.**
 
-### Regra de geração
+### Gatilho de geração
 
-Sempre que um agente ou o orquestrador produzir uma explicação técnica de conceito, ferramenta, padrão ou decisão de arquitetura, deve ser criado um artefato de aprendizado seguindo este padrão:
+O artefato é gerado sempre que:
+- Um agente ou o orquestrador produz uma explicação técnica de conceito, ferramenta, padrão ou decisão de arquitetura
+- **O usuário faz uma pergunta** que resulta em explicação (ex: "por que X?", "como funciona Y?", "qual a diferença entre A e B?")
 
-**Nomenclatura:** `NNN-slug-do-tema.md` (ex: `001-railway-aws-pipeline-jenkins-github-actions.md`)
+### Destino do artefato
 
-**Estrutura obrigatória do documento:**
+| Tipo de conteúdo | Pasta de destino |
+|---|---|
+| Conceitos técnicos gerais (git, AWS, React, etc.) | `.docs/learnings/NNN-slug.md` |
+| Aprendizados sobre sistemas multi-agente, Kiro, pipelines agentivos | `.docs/learnings/aprendizagem-agentica/NNN-slug.md` |
+
+### Nomenclatura
+
+`NNN-slug-do-tema.md` — numeração sequencial global entre as duas pastas.
+Verificar o maior número em `.docs/learnings/` e `.docs/learnings/aprendizagem-agentica/` antes de criar.
+
+### Estrutura obrigatória do documento
 
 ```markdown
 # NNN — [Título do Tema]
@@ -112,6 +124,9 @@ Sempre que um agente ou o orquestrador produzir uma explicação técnica de con
 ## Comparativo (se aplicável)
 [Tabela comparando opções/ferramentas]
 
+## Como o MathQuiz usa isso (quando aplicável)
+[Seção obrigatória se o tema envolver o próprio projeto]
+
 ## Exercícios — Múltipla Escolha
 [Mínimo 5 questões, máximo 10]
 - Cada questão com 4 alternativas (A, B, C, D)
@@ -129,8 +144,3 @@ Sempre que um agente ou o orquestrador produzir uma explicação técnica de con
 - Todo trecho de código deve ser **funcional e comentado**
 - Questões de exercício devem cobrir tanto teoria quanto aplicação prática
 - O gabarito deve incluir **justificativa**, não apenas a letra correta
-- Quando o tema envolver o próprio projeto, incluir seção "Como o MathQuiz usa isso"
-
-### Numeração
-
-O contador de documentos é sequencial global. Verificar o maior número existente em `.docs/learnings/` antes de criar um novo arquivo.

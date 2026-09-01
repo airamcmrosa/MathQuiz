@@ -127,7 +127,7 @@ O `kiro_default` não conhece o flow definido em `flow-definition.md` a não ser
 O prompt `"Implement this plan"` com o plano colado no contexto faz o agente padrão entrar em modo de execução direta. Para um sistema multi-agente, o prompt correto é:
 
 ```
-"Inicie o orquestrador com este plano. 
+"Inicie o orquestrador com este plano.
 Você é o orquestrador. Siga o flow-definition.md."
 ```
 
@@ -165,7 +165,7 @@ Ver atualização em `.kiro/agents/orchestrator.json`:
 
 ### docs/bootstrapping.md — Guia de inicialização
 
-Ver `.kiro/docs/bootstrapping.md` para instruções de como iniciar o sistema corretamente.
+Ver `docs/bootstrapping.md` para instruções de como iniciar o sistema corretamente.
 
 ---
 
