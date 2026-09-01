@@ -99,6 +99,10 @@ O artefato é gerado sempre que:
 | Conceitos técnicos gerais (git, AWS, React, etc.) | `.docs/learnings/NNN-slug.md` |
 | Aprendizados sobre sistemas multi-agente, Kiro, pipelines agentivos | `.docs/learnings/aprendizagem-agentica/NNN-slug.md` |
 
+> `.docs/` é uma pasta local — está no `.gitignore` e não é versionada.
+> Contém artefatos de estudo pessoal que acompanham o projeto localmente.
+> Para documentação técnica do projeto (ADRs, bootstrapping, etc.), use `docs/` (versionada).
+
 ### Nomenclatura
 
 `NNN-slug-do-tema.md` — numeração sequencial global entre as duas pastas.

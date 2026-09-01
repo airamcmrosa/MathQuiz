@@ -46,3 +46,7 @@ coverage/
 # Exceção: install-hooks.ps1 é versionado para que quem clonar saiba instalar os hooks
 scripts/
 !scripts/install-hooks.ps1
+
+# Artefatos de estudo pessoal — não pertencem ao repositório do projeto
+# Use docs/ para documentação técnica do projeto (versionada)
+.docs/
