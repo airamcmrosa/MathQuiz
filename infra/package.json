@@ -1,0 +1,22 @@
+{
+  "name": "quiz-infra",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy --require-approval never",
+    "destroy": "cdk destroy",
+    "diff": "cdk diff"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.172.0",
+    "constructs": "^10.4.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/node": "^22.10.1",
+    "aws-cdk": "^2.172.0",
+    "typescript": "^5.6.3"
+  }
+}

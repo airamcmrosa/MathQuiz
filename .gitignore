@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+**/dist/
+**/build/
+frontend/dist/
+
+# Environment files — NEVER commit
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# CDK
+infra/cdk.out/
+infra/cdk.context.json
+
+# Logs
+logs/*.json
+logs/reviews/*.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+**/coverage/
+
+# TypeScript cache
+*.tsbuildinfo
