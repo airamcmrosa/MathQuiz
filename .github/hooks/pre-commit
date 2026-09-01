@@ -1,0 +1,26 @@
+#!/bin/sh
+# pre-commit hook — MathQuiz
+# Bloqueia `git commit` direto. Use scripts/commit-push.ps1 em vez disso.
+#
+# Instalado por: scripts/install-hooks.ps1
+# Para desinstalar: rm .git/hooks/pre-commit
+
+# Detecta se o commit está sendo feito via commit-push.ps1
+# O script seta a variável de ambiente MATHQUIZ_SCRIPT_COMMIT=1 antes de rodar `git commit`
+if [ "$MATHQUIZ_SCRIPT_COMMIT" = "1" ]; then
+    exit 0
+fi
+
+echo ""
+echo "🛑 Commit direto bloqueado."
+echo ""
+echo "   Use o script autorizado:"
+echo "   .\\scripts\\commit-push.ps1 -Message 'tipo(escopo): descrição' -Path caminho/arquivo"
+echo ""
+echo "   Para preview do diff antes de commitar:"
+echo "   .\\scripts\\commit-push.ps1 -DiffOnly -Path caminho/arquivo"
+echo ""
+echo "   Se você está em um contexto automatizado (CI/CD, GitHub Actions),"
+echo "   certifique-se de que MATHQUIZ_SCRIPT_COMMIT=1 está no ambiente."
+echo ""
+exit 1

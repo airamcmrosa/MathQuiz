@@ -41,3 +41,8 @@ coverage/
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Scripts locais — não versionados (contêm lógica de automação local)
+# Exceção: install-hooks.ps1 é versionado para que quem clonar saiba instalar os hooks
+scripts/
+!scripts/install-hooks.ps1

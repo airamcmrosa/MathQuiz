@@ -1,0 +1,24 @@
+#!/bin/sh
+# pre-push hook — MathQuiz
+# Bloqueia `git push` direto. Use scripts/commit-push.ps1 em vez disso.
+#
+# Instalado por: scripts/install-hooks.ps1
+# Para desinstalar: rm .git/hooks/pre-push
+
+# Detecta se o push está sendo feito via commit-push.ps1
+if [ "$MATHQUIZ_SCRIPT_COMMIT" = "1" ]; then
+    exit 0
+fi
+
+# Permite push de GitHub Actions (tokens de instalação dos Apps)
+if [ -n "$GITHUB_ACTIONS" ]; then
+    exit 0
+fi
+
+echo ""
+echo "🛑 Push direto bloqueado."
+echo ""
+echo "   Use o script autorizado (selecione 'y' no Portão 2):"
+echo "   .\\scripts\\commit-push.ps1 -Message 'tipo(escopo): descrição' -Path caminho/arquivo"
+echo ""
+exit 1
